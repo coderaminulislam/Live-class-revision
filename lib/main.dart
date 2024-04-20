@@ -1,25 +1,54 @@
-import 'package:app1/class/class_5.dart';
 import 'package:flutter/material.dart';
-import 'package:app1/screen/home.dart';
-
-// import 'class/class_3.dart';
-import 'class/Statefullwidget.dart';
-import 'class/class_4.dart';
 
 void main() {
-  runApp(const App());
+  runApp(Myapp());
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
-
+class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false,
+    return MaterialApp(
       home: HomeScreen(),
     );
   }
 }
 
-
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('Home Screen'),
+      ),
+      // aspect ratio
+    /*  body: Column(
+        children: [
+          Flexible(
+            fit: FlexFit.tight,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.green,
+            ),
+          ),
+          Expanded(
+           flex: 2,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.pink,
+            ),
+          ),
+          Expanded(
+            flex: 2,
+              child: Container(
+            width: 100,
+            height: 100,
+            color: Colors.orange,
+          ))
+        ],
+      ),*/
+    );
+  }
+}
